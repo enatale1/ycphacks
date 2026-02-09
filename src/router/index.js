@@ -8,6 +8,7 @@ import ActivitiesPage from '../views/ActivitiesPage.vue';
 import HardwarePage from '../views/HardwarePage.vue';
 import TeamsPage from '@/views/TeamsPage.vue';
 import CategoriesPage from '../views/CategoriesPage.vue';
+import CheckinPage from "@/views/CheckinPage.vue";
 
 const routes = [
     {
@@ -34,6 +35,11 @@ const routes = [
         path: '/hardware',
         name: 'Hardware',
         component: HardwarePage,
+    },
+    {
+        path: '/checkin',
+        name: 'Checkin',
+        component: CheckinPage,
     },
     {
         path: '/teams',
