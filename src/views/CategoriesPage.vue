@@ -1,25 +1,30 @@
 <!-- Template -->
 <template>
-  <div class="categories-page">
+
+  <div class="container-top">
+
+    <!-- Header -->
+    <header class="main-header">
+      <div class="text-center py-4">
+        <h1 class="mb-2">Hacks Categories</h1>
+        <hr class="header-line" />
+      </div>
+    </header>
+
+  </div>
+
     <div class="categories">
-      <div class="container">
-
-        <!-- Header -->
-        <div class="header">
-            <p>Hack Categories</p>
-        </div>
-
 
         <!-- Spacer to push dropdown lower -->
-        <div style="height: 60px;"></div>
+        <div style="height: 20px;"></div>
 
         <!-- Centered dropdown -->
         <div class="dropdown-row">
           <div class="event-dropdown">
-            <label for="event-select">Select Event:</label>
+            <label for="event-select-label">Select Event:</label>
             <select id="event-select" v-model="selectedEventId" @change="fetchCategories">
               <option :value="null" disabled>Select an event</option>
-              <option :value="null">     </option>
+              <option :value="null">None</option>
               <option v-for="event in events" :key="event.id" :value="event.id">
                 {{ event.eventName }}
               </option>
@@ -64,10 +69,8 @@
           No categories found for this event.
         </div>
 
-        
-      </div>
+
     </div>
-  </div>  
 
 </template> 
 <!-- end Template -->
@@ -156,61 +159,55 @@ export default {
 <!-- Styling  -->
 <style scoped>
 
+.event-dropdown label {
+  font-weight: bolder;
+  font-size: clamp(1rem, 10vw, 2rem);
+  color: #FAF9F6
+}
+
+.event-dropdown select {
+  background-color: #FAF9F6;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: bold;
+}
+
+.event-dropdown option {
+  background-color: #fff;
+}
+
 .dropdown-row {
   display: flex;
-  justify-content: right;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
 .event-dropdown {
   display: flex;
-  align-items: right;
+  align-items: center;
   gap: 8px;
   margin: 0;
 }
-.header {
-  position: relative;
-}
-
-
-.header{
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #00680a;
-}
-
-.categories-page {
-  text-align: center;
-  background-color: #ccffcc;
-  position: relative;
-  overflow: hidden;
-}
 
 .categories {
-  margin-top: 50px;
-  background-color: #93dda3;
+  background-color: #231F20;
 }
 
 .categories-list {
-  list-style-type: none;  
+  list-style-type: none;
+  width: 70%;
+  align-self: center;
   padding: 0;             
-  margin: 0;              
-}
-
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 960px;
   margin: 0 auto;
-  padding: 38px 20px;
-  box-sizing: border-box;
 }
 
 .category {
+  margin-top: 30px;
+  height: 100%;
   margin-bottom: 20px;
   text-align: left;
-  background: #fff;
+  background-color: #008350;
   padding: 10px 15px;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -218,8 +215,8 @@ export default {
 
 .category-header {
   cursor: pointer;
-  font-weight: bold;
-  font-size: 22px;
+  font-weight: bolder;
+  font-size: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -246,5 +243,6 @@ export default {
   margin: 30px 0;
   font-style: italic;
 }
+
 </style>
 <!-- end Styling  -->

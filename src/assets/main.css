@@ -12,4 +12,34 @@
 
 html, body{
     overflow-x: hidden;
+    height: 100%;
+    background-color: #fff;
+}
+.main-header{
+    margin-top: 6rem;
+    margin-bottom: 0;
+    color: #FAF9F6;
+    width: 100%;
+}
+
+.mb-2 {
+    font-weight: bolder;
+    font-size: clamp(3rem, 5vw + 1rem, 5rem);
+}
+
+.main-header h1 {
+    font-weight: bolder;
+    color: #fff;
+}
+
+.header-line{
+    width: clamp(70%, 70%, 75%);
+    margin: 0.5rem auto 0;
+    border-top: 5px solid #fff;
+}
+
+.container-top{
+    background-color: #231F20;
+    position: relative;
+    overflow: hidden;
 }

@@ -1,5 +1,17 @@
 <template>
   <nav class="navbar">
+    <a
+        id="mlh-trust-badge"
+        style="display:block;max-width:100px;min-width:60px;position:fixed;left:0px;top:0;width:10%;z-index:10000"
+        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
+        target="_blank"
+    >
+      <img
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
+          alt="Major League Hacking 2024 Hackathon Season"
+          style="width:100%"
+      />
+    </a>
     <div class="nav">
         <div class="nav-right" v-if="isLoggedIn">
           <div class="nav-right" v-if="isInTeam">
@@ -87,7 +99,7 @@ export default {
   z-index: 9999;
   width: 100%;
   height: 60px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #008350;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,19 +107,14 @@ export default {
 }
 
 .navbar a {
-  color: white;
   text-decoration: none;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
   gap: 20px; /* space between links */
+  color: #231F20;
 }
 
 .dropdown {
@@ -115,9 +122,10 @@ export default {
 }
 
 .dropdown-button {
+  font-weight: bold;
   background: none;
   border: none;
-  color: white;
+  color: black;
   font-size: 16px;
   cursor: pointer;
 }
@@ -126,7 +134,7 @@ export default {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: white;
   list-style: none;
   padding: 10px;
   margin: 0;
@@ -140,7 +148,8 @@ export default {
 }
 
 .dropdown-menu .nav-link {
-  color: white;
+  color: black;
+  font-weight: bold;
   text-decoration: none;
   display: inline-block;
   padding: 0;
@@ -158,7 +167,7 @@ export default {
 }
 
 .nav-link {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -176,4 +185,10 @@ export default {
   display: block;
   opacity: 1;
 }
+.navbar a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
 </style>

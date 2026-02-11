@@ -10,7 +10,7 @@
   <div class="container-fluid">
     <div class="row align-items-start mt-5">
       <main class="col-md-12 col-lg-8 offset-lg-2">
-        <div class="p-4 border rounded bg-white shadow-sm main-box">
+        <div class="p-4">
 
           <div class="mb-4">
             <input
@@ -251,6 +251,24 @@ export default {
 }
 /* ------------------------------------------ */
 
+.p-4 {
+  background-color: #008350;
+  border: none;
+}
+
+.form-control::placeholder {
+  color:#fff;
+}
+
+.mb-4 input {
+  background-color: #008350;
+  border-color: #fff;
+  color: #fff;
+}
+.p-5 {
+  background-color: #008350;
+}
+
 body {
   font-family: Lato, sans-serif;
   color: #fff;
@@ -259,13 +277,9 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-.container-top{
-  background-color: #64965d;
-  position: relative;
-  overflow: hidden;
-}
+
 .container-fluid {
-  background-color: #93dda3;
+  background-color: #231F20;
   position: relative; /* Ensure this is the context for absolute positioning */
   overflow: hidden;
   min-height: 100vh;
@@ -280,20 +294,6 @@ body {
   margin-top: 0;
 }
 /* background-color: #64965d; */
-.main-header{
-  margin-top: 6rem;
-  margin-bottom: 0;
-  color: #6c757d;
-  width: 100%;
-}
-.main-header h1 {
-  color: #f8f9fa;
-}
-.header-line{
-  width: 60%;
-  margin: 0.5rem auto 0;
-  border-top: 3px solid #f8f9fa;
-}
 
 /* Sidebar min width */
 aside {
@@ -310,15 +310,13 @@ aside {
 .not-found-box{
   padding: 30px !important;
   margin-top: 30px;
-  border: 1px dashed #ced4da;
+  border: 1px dashed #fff;
   border-radius: 8px;
-  background-color: #f8f9fa;
+  background-color: #008350;
 }
 .not-found-box h2, .not-found-box o{
   color: #495057 !important;
 }
 
-html, body{
-  height: 100%;
-}
+
 </style>
