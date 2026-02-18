@@ -233,7 +233,7 @@ export default {
   margin-top: 10px;
   margin-left: 20px;
   list-style-type: circle;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .no-events-message,

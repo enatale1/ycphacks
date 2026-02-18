@@ -258,6 +258,8 @@ export default {
 
 .form-control::placeholder {
   color:#fff;
+  font-weight: bolder;
+  font-size: 22px;
 }
 
 .mb-4 input {

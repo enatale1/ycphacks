@@ -1,11 +1,15 @@
 <template>
-  <div v-if="!isLoading" class="schedule" id="schedule">
-    <div v-if="event && Object.keys(event).length > 0" class="container" style="color: #ffffff">
-      <div class="header" style="margin-bottom: 10px;">
-        <div class="circle" style="font-size:27px; height:100px;">
-          <p>{{ new Date(event.startDate).getFullYear() || '' }} Schedule</p>
-        </div>
+  <div v-if="!isLoading" class="container-top" id="schedule">
+    <div v-if="event && Object.keys(event).length > 0" class="container-top" style="color: #ffffff">
+      <div class="container-top">
+        <header class="main-header">
+          <div class="text-center py-4">
+            <h1 class="mb-2">Activities</h1>
+            <hr class="header-line" />
+          </div>
+        </header>
       </div>
+
 
       <div class="schedule-content">
         <div v-for="(activities, date) in groupedActivities" :key="date">
@@ -63,7 +67,7 @@
           </table>
           <div v-else style="padding:15px 0; color: #5f8653">There are no activities currently set for this date. Please check back later!</div>
         </div>
-        <div style="padding:15px 0; color:#5f8653;">* Schedule is subject to change.</div>
+        <div class ="text-center py-4" style="padding:15px 0; color:#008350; font-size: 30px">* Schedule is subject to change.</div>
       </div>
     </div>
     <div v-else class="no-event-container">
@@ -198,36 +202,7 @@ export default {
 </script>
 
 <style scoped>
-body {
-    font-family: Lato, sans-serif;
-    color: #fff;
-    font-weight: 300;
-    font-size: 18px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-.na
-.intro .main-header {
-    text-align: center;
-    display: block;
-    position: relative;
-    z-index: 100;
-}
-.intro .circle {
-    display: inline-block;
-    width: 200px;
-    height: 100px;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 10%;
-    border: 6px solid #fff;
-    text-align: center;
-    color: white;
-    line-height: 100px;
-    font-size: 20px;
-    transition: all .3s ease;
-}
+
 .bounce {
     -webkit-animation-name: bounce;
     animation-name: bounce;
@@ -265,39 +240,11 @@ a {
   text-align: center; /* Center content */
 }
 
-.intro h1 {
-  font-family: 'Headliner', sans-serif;
-  font-size: 60px;
-}
-
 .intro h2 {
   font-size: 30px;
 }
 
-.circle {
-  display: inline-block;
-  width: 200px;
-  height: 100px;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 0;
-  border: 6px solid #fff;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  transition: all 0.3s ease;
-  padding-bottom: 10%;
-}
 
-.header .circle {
-    background: #fff;
-    position: relative;
-    -webkit-transform: skew(-20deg);
-    -moz-transform: skew(-20deg);
-    -o-transform: skew(-20deg);
-    transform: skew(-20deg);
-}
 .container {
     position: relative;
     width: 100%;
@@ -321,13 +268,7 @@ a {
 .header {
     text-align: center;
 }
-.circle p {
-    font-size: 32px;
-    -webkit-transform: skew(20deg);
-    -moz-transform: skew(20deg);
-    -o-transform: skew(20deg);
-    transform: skew(20deg);
-}
+
 pre, blockquote, dl, figure, table, p, ul, ol, form {
     margin-bottom: 2.5rem;
 }
@@ -341,18 +282,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 img{
   border:0;
 }
-.intro h1 {
-    padding-top: 100px;
-   font-family: 'Headliner', sans-serif;
-    font-size: 60px;
-}
-.circle p {
-    font-size: 32px;
-    -webkit-transform: skew(20deg);
-    -moz-transform: skew(20deg);
-    -o-transform: skew(20deg);
-    transform: skew(20deg);
-}
+
  .attend {
   position: relative;
   text-align: center;
@@ -389,36 +319,12 @@ iframe {
   border-radius: 10px; /* Rounded corners for videos */
 }
 
-h1{
-  line-height:1.2;
-  letter-spacing:-.1rem;
-}
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 2rem;
     font-weight: 300;
 }
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-.schedule {
-    padding-top: 60px;
-    background-color: #a0dda3;
-    min-height: 100vh;
-}
-.schedule .header .circle {
-    font-size: 40px;
-}
 
-.circle p {
-    color:#64965d;
-    font-size: 32px;
-    -webkit-transform: skew(20deg);
-    -moz-transform: skew(20deg);
-    -o-transform: skew(20deg);
-    transform: skew(20deg);
-}
 #day-tag {
     font-size: 40px;
 }

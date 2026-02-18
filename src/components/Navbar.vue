@@ -56,7 +56,7 @@ export default {
   z-index: 9999;
   width: 100%;
   height: 60px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #008350;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,6 +66,7 @@ export default {
 .navbar a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .dropdown {
@@ -99,6 +100,7 @@ export default {
 .dropdown-menu .nav-link {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .dropdown-menu .nav-link:hover {
