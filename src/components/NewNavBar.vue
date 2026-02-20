@@ -14,9 +14,8 @@
     </a>
     <div class="nav">
         <div class="nav-right" v-if="isLoggedIn">
-          <div class="nav-right" v-if="isInTeam">
-            <router-link class="nav-link" to="/teams">Team Information</router-link>
-          </div>
+          <router-link class = "nav-link" to="/checkin">Check In</router-link>
+          <router-link class="nav-link" to="/teams">Team Information</router-link>
           <router-link class="nav-link" to="/activities">Activities</router-link>
           <div class="dropdown hardware-dropdown">
             <a class="dropdown-button nav-link" href="/hardware">Hardware</a>
