@@ -55,11 +55,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-.container-top{
-  background-color: #64965d;
-  position: relative;
-  overflow: hidden;
-}
+
 .container-fluid {
   background-color: #93dda3;
   position: relative;
@@ -69,18 +65,10 @@ body {
 .main-box {
   margin-top: 0;
 }
-.main-header{
-  margin-top: 6rem;
-  margin-bottom: 0;
-  color: #6c757d;
-  width: 100%;
+
+.qr-image {
+  height: 300px;
+  width: 300px;
 }
-.main-header h1 {
-  color: #f8f9fa;
-}
-.header-line{
-  width: 60%;
-  margin: 0.5rem auto 0;
-  border-top: 3px solid #f8f9fa;
-}
+
 </style>

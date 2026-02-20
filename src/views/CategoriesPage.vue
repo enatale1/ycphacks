@@ -106,9 +106,10 @@ export default {
     fetchCategories() {
       if (!this.selectedEventId) {
         this.categories = []; // clear categories if no event is selected
+        console.log(this.categories);
         return;
       }
-        axios.get(`http://localhost:3000/event/category/${this.selectedEventId}`)
+        axios.get(`http://localhost:3000/category/by-event/${this.selectedEventId}`)
         .then(response => {
           this.categories = response.data.categories
             ? response.data.categories.map(category => ({ ...category, open: false }))
